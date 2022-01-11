@@ -1,0 +1,115 @@
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #222;
+    min-height: 100vh;
+}
+.center, .content{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+#click{
+    display: none;
+}
+.click_me{
+    position: relative;
+    display: inline-block;
+    width: 200px;
+    height: 60px;
+    color: #5a84a2;
+    text-align: center;
+    font-size: 1.5em;
+    line-height: 2.4em;
+    border-radius: 40px;
+    cursor: pointer;
+    transition: 0.2s ease-in;
+    text-transform: uppercase;
+    box-shadow: inset -2px -2px 8px rgb(0 0 0),
+    inset -2px -2px 12px rgb(0 0 0),
+    inset 2px 2px 4px rgb(16 15 15 / 98%),
+    inset 2px 2px 8px rgb(0 0 0 / 88%);
+}
+.click_me:hover{
+    box-shadow: -2px 7px 8px rgb(0 0 0),
+    -2px -2px 12px rgb(0 0 0 / 99%),
+    inset 2px 2px 4px rgb(0 0 0),
+    2px 2px 8px rgb(0 0 0);
+    transition: 0.5s;
+    display: inline-block;
+    transform: scale(0.98);
+}
+.content{
+    width: 25em;
+    height: 28em;
+    text-transform: capitalize;
+    background: white;
+    border-radius: 1em;
+    box-shadow: 0px 0px 20px rgb(255 255 255 / 50%),
+    0px 0px 20px rgb(0 0 0 / 20%);
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.6s ease-in;
+}
+#click:checked ~ .content{
+    opacity: 1;
+    visibility: visible;
+    transition: 1s ease-in;
+
+}
+.header{
+    height: 4em;
+    background-color: #ffbe07;
+    overflow: hidden;
+    border-radius: 1em 1em 0em 0em;
+}
+.header h2{
+    color: white;
+    padding: 0 32px;
+    text-align: center;
+    font-weight: normal;
+}
+.fa-times{
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    color: white;
+    font-size: 1.2em;
+    font-weight: bold;
+    cursor: pointer;
+}
+.fa-check{
+    text-align: center;
+    width: 1em;
+    height: 1em;
+    margin: 20px 150px;
+    color: green;
+    font-size: 3em;
+    border: 1px solid green;
+    border-radius: 50%;
+    padding: 0.5em;
+}
+p{
+    padding: 10px;
+    font-size: 1em;
+    text-align: center;
+    font-family: -webkit-pictograph;
+}
+.line{
+    bottom: 2em;
+    width: 100%;
+    height: 0.1em;
+    background-color: rgb(161, 161, 161);
+}
+.close_btn{
+    position: absolute;
+    bottom: 1em;
+    right: 1em;
+    border: 0.5px solid #ffbe07;
+    padding: 0.6em;
+    font-size: 1em;
+    border-radius: 0.3em;
+    cursor: pointer;
+}
